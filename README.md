@@ -1,4 +1,4 @@
-[![build status](https://github.com/lemutec/BuildTimestampGenerator/actions/workflows/dotnet.yml/badge.svg)](https://github.com/Lemutec/BuildTimestampGenerator/actions/workflows/dotnet.yaml) [![nuget](https://img.shields.io/nuget/v/Lemutec.BuildTimestampGenerator)](https://www.nuget.org/packages/Lemutec.BuildTimestampGenerator) [![license: 0BSD](https://img.shields.io/badge/license-0BSD-green)](./LICENSE)
+[![Actions](https://github.com/lemutec/BuildTimestampGenerator/actions/workflows/dotnet.yaml/badge.svg)](https://github.com/lemutec/BuildTimestampGenerator/actions/workflows/dotnet.yml) [![nuget](https://img.shields.io/nuget/v/Lemutec.BuildTimestampGenerator)](https://www.nuget.org/packages/Lemutec.BuildTimestampGenerator) [![license: 0BSD](https://img.shields.io/badge/license-0BSD-green)](./LICENSE)
 
 ![icon](.meta/timestamp-icon.png#gh-dark-mode-only)
 ![icon](.meta/timestamp-icon-alt.png#gh-light-mode-only)
