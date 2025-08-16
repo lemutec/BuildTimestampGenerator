@@ -1,4 +1,4 @@
-[![build status](https://img.shields.io/github/workflow/status/cmdwtf/BuildTimestampGenerator/.NET%20Build%20&%20NuGet%20Publish)](https://github.com/cmdwtf/BuildTimestampGenerator/actions/workflows/dotnet.yaml) [![nuget](https://img.shields.io/nuget/v/cmdwtf.BuildTimestampGenerator)](https://www.nuget.org/packages/cmdwtf.BuildTimestampGenerator) [![license: 0BSD](https://img.shields.io/badge/license-0BSD-green)](./LICENSE)
+[![build status](https://github.com/lemutec/BuildTimestampGenerator/actions/workflows/dotnet.yml/badge.svg)](https://github.com/Lemutec/BuildTimestampGenerator/actions/workflows/dotnet.yaml) [![nuget](https://img.shields.io/nuget/v/Lemutec.BuildTimestampGenerator)](https://www.nuget.org/packages/Lemutec.BuildTimestampGenerator) [![license: 0BSD](https://img.shields.io/badge/license-0BSD-green)](./LICENSE)
 
 ![icon](.meta/timestamp-icon.png#gh-dark-mode-only)
 ![icon](.meta/timestamp-icon-alt.png#gh-light-mode-only)
@@ -8,18 +8,20 @@ Have you wanted a way to reliably get the time your application was compiled at,
 
 This is a small Roslyn source generator that outputs a class, `BuildTimestamp`, that contains several variables that describe when the source generator was run (and thus when your project was built.)
 
+Here is a forked repo, since `the word` is not allowed in the source code.
+
 ## ❓Usage
 
-- Reference the source generator (sometimes called 'analyzer') in your `.csproj`, to [install it from NuGet](https://www.nuget.org/packages/cmdwtf.BuildTimestampGenerator):
+- Reference the source generator (sometimes called 'analyzer') in your `.csproj`, to [install it from NuGet](https://www.nuget.org/packages/Lemutec.BuildTimestampGenerator):
 ```xml
   <ItemGroup>
-    <PackageReference Include="cmdwtf.BuildTimestampGenerator" Version="*" PrivateAssets="all" />
+    <PackageReference Include="Lemutec.BuildTimestampGenerator" Version="*" PrivateAssets="all" />
   </ItemGroup>
 ```
   - If you want to refrence the project on disk rather than the NuGet package,
          see an example reference [here](https://docs.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/source-generators-overview#code-try-4).
 - Build once so packages are restored and source can be generated.
-- Use the properties of the class `cmdwtf.BuildTimestamp` to determine your compile time!
+- Use the properties of the class `Lemutec.BuildTimestamp` to determine your compile time!
 
 ### ❗Example
 
@@ -34,7 +36,7 @@ namespace HelloTimestamp
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine($"I was built at {cmdwtf.BuildTimestamp.BuildTime}");
+            Console.WriteLine($"I was built at {Lemutec.BuildTimestamp.BuildTime}");
         }
     }
 }
@@ -49,9 +51,9 @@ I was built at 1/27/2022 12:54:21 PM
 (Obviously, your output will vary.)
 
 ## 📝 License
-cmdwtf.BuildTimestampGenerator is [licensed](./LICENSE) under the Zero-Clause BSD License (SPDX-License-Identifier: 0BSD). If you're interested in cmdwtf.BuildTimestampGenerator under other terms, please contact the authors. cmdwtf.BuildTimestampGenerator may make use of several open source packages. Those packages are each covered by their own copyrights and licenses, which are available via the tooling you use to restore the packages when building. As well, some portions of code are distributed under terms of other licenses, which are designated in comments. See `copyright` for more details.
+Lemutec.BuildTimestampGenerator is [licensed](./LICENSE) under the Zero-Clause BSD License (SPDX-License-Identifier: 0BSD). If you're interested in cmdwtf.BuildTimestampGenerator under other terms, please contact the authors. cmdwtf.BuildTimestampGenerator may make use of several open source packages. Those packages are each covered by their own copyrights and licenses, which are available via the tooling you use to restore the packages when building. As well, some portions of code are distributed under terms of other licenses, which are designated in comments. See `copyright` for more details.
 
-Copyright © 2022 [Chris March Dailey](https://cmd.wtf)
+Copyright © 2022 Chris March Dailey
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted.
 

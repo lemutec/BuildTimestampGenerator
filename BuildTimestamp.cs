@@ -2,7 +2,7 @@ using System;
 
 using Microsoft.CodeAnalysis;
 
-namespace cmdwtf.BuildTimestampGenerator
+namespace Lemutec.BuildTimestampGenerator
 {
 	[Generator]
 	internal class BuildTimestamp : ISourceGenerator
@@ -16,7 +16,7 @@ namespace cmdwtf.BuildTimestampGenerator
 using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace {nameof(cmdwtf)}
+namespace {nameof(Lemutec)}
 {{
 	/// <summary>
 	/// A static class representing when it was generated.
@@ -77,6 +77,8 @@ namespace {nameof(cmdwtf)}
 			context.AddSource($"{nameof(BuildTimestamp)}.g.cs", source);
 		}
 
-		public void Initialize(GeneratorInitializationContext context) { }
+		public void Initialize(GeneratorInitializationContext context)
+		{
+		}
 	}
 }

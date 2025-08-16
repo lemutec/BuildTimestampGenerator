@@ -5,7 +5,7 @@
     <IncludeBuildOutput>true</IncludeBuildOutput>
     <IsRoslynComponent>true</IsRoslynComponent>
 
-    <RootNamespace>cmdwtf.BuildTimestampGenerator</RootNamespace>
+    <RootNamespace>Lemutec.BuildTimestampGenerator</RootNamespace>
     <AssemblyName>$(RootNamespace)</AssemblyName>
     <Deterministic>true</Deterministic>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
@@ -20,23 +20,23 @@
     <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
     <Description>A small source generator that outputs a class, `BuildTimestamp`, that contains several variables that describe when the source generator was run (and thus when your project was built.)</Description>
     <PackageTags>source generator;build time;timestamp;datetime;datetimeoffset;analyzer;roslyn</PackageTags>
-    <Product>cmd.wtf BuildTimestampGenerator</Product>
+    <Product>BuildTimestampGenerator</Product>
 
     <Authors>Chris Marc Dailey (nitz)</Authors>
     <PackageId>$(AssemblyName)</PackageId>
-    <Company>cmd.wtf</Company>
+    <Company>Lemutec</Company>
     <Copyright>© 2022 Chris Marc Dailey</Copyright>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeSymbols>true</IncludeSymbols>
     <NoPackageAnalysis>true</NoPackageAnalysis>
-    <PackageIcon>timestamp-icon-alt.png</PackageIcon>
+    <PackageIcon>timestamp-icon-color.png</PackageIcon>
     <PackageLicenseExpression>0BSD</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://cmd.wtf/projects/buildtimestamp</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/Lemutec/BuildTimestampGenerator</PackageProjectUrl>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/cmdwtf/BuildTimestampGenerator</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Lemutec/BuildTimestampGenerator</RepositoryUrl>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <Title>$(Product)</Title>
   </PropertyGroup>
@@ -58,7 +58,7 @@
     <Content Include="$(cd).meta\$(PackageIcon)" Visible="false">
       <PackagePath>.\</PackagePath>
     </Content>
-    <Content Include="$(cd)\LICENSE; $(cd)\copyright; $(cd)\*.md" Visible="false">
+    <Content Include="$(cd)\LICENSE; $(cd)\*.md" Visible="false">
       <PackagePath>.\</PackagePath>
     </Content>
   </ItemGroup>

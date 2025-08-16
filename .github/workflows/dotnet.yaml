@@ -56,11 +56,11 @@ jobs:
         echo "$env:LocalAppData\Microsoft\dotnet;$env:UserProfile\.dotnet\tools;$env:PATH"
         $env:GITHUB_PATH="$env:LocalAppData\Microsoft\dotnet;$env:UserProfile\.dotnet\tools;$env:PATH"
 
-    - name: Setup .NET 6.0
+    - name: Setup .NET 9.0
       if: steps.cache-dotnet-toolchain.outputs.cache-hit != 'true'
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 9.0.x
 
     # packages don't like to restore if you don't clean first?
     # see: https://github.com/actions/setup-dotnet/issues/155
@@ -108,7 +108,7 @@ jobs:
       uses: nitz/publish-nuget@13cf3a0ec3840b62a0fd20d559ab1e2a63b0d75a
       with:
         PROJECT_FILE_PATH: BuildTimestampGenerator.csproj
-        PACKAGE_NAME: cmdwtf.BuildTimestampGenerator
+        PACKAGE_NAME: Lemutec.BuildTimestampGenerator
         TAG_COMMIT: true
         VERSION_FILE_PATH: BuildTimestampGenerator.csproj
         VERSION_REGEX: ^\s*<VersionPrefix>(.*)<\/VersionPrefix>\s*$
