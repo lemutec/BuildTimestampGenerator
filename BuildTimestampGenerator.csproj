@@ -14,7 +14,7 @@
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
     <NeutralLanguage>en</NeutralLanguage>
 
-    <VersionPrefix>1.1.1</VersionPrefix>
+    <VersionPrefix>1.1.2</VersionPrefix>
     <VersionSuffix>$(VersionSuffix)</VersionSuffix>
 
     <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
@@ -31,6 +31,7 @@
     <IncludeSymbols>true</IncludeSymbols>
     <NoPackageAnalysis>true</NoPackageAnalysis>
     <PackageIcon>logo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>0BSD</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/Lemutec/BuildTimestampGenerator</PackageProjectUrl>
@@ -58,6 +59,7 @@
     <Content Include="$(cd).meta\$(PackageIcon)" Visible="false">
       <PackagePath>.\</PackagePath>
     </Content>
+    <None Include="$(cd)\README.md" Pack="true" PackagePath="\" Visible="false" />
     <Content Include="$(cd)\LICENSE; $(cd)\*.md" Visible="false">
       <PackagePath>.\</PackagePath>
     </Content>
