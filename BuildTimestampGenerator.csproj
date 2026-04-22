@@ -43,7 +43,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
     <PackageReference Include="Microsoft.CodeAnalysis" Version="3.9.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
       <PrivateAssets>all</PrivateAssets>
@@ -56,11 +56,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="$(cd).meta\$(PackageIcon)" Visible="false">
+    <Content Include="$(cd)branding\$(PackageIcon)">
       <PackagePath>.\</PackagePath>
     </Content>
-    <None Include="$(cd)\README.md" Pack="true" PackagePath="\" Visible="false" />
-    <Content Include="$(cd)\LICENSE; $(cd)\*.md" Visible="false">
+    <Content Include="$(cd)README.md">
       <PackagePath>.\</PackagePath>
     </Content>
   </ItemGroup>
@@ -75,7 +74,7 @@
     <TargetFrameworkMonikerAssemblyAttributesPath>$([System.IO.Path]::Combine('$(IntermediateOutputPath)','$(TargetFrameworkMoniker).AssemblyAttributes$(DefaultLanguageSourceExtension)'))</TargetFrameworkMonikerAssemblyAttributesPath>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedFiles Include="$(GeneratedAssemblyInfoFile)"/>
+    <EmbeddedFiles Include="$(GeneratedAssemblyInfoFile)" />
   </ItemGroup>
   <!-- end workaround for sourcelink issue -->
 

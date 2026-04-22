@@ -1,6 +1,6 @@
 [![Actions](https://github.com/lemutec/BuildTimestampGenerator/actions/workflows/dotnet.yaml/badge.svg)](https://github.com/lemutec/BuildTimestampGenerator/actions/workflows/dotnet.yml) [![nuget](https://img.shields.io/nuget/v/Lemutec.BuildTimestampGenerator)](https://www.nuget.org/packages/Lemutec.BuildTimestampGenerator) [![license: 0BSD](https://img.shields.io/badge/license-0BSD-green)](./LICENSE)
 
-![icon](.meta/logo.png)
+![icon](branding/logo.svg)
 
 # 🛠⏲ BuildTimestampGenerator
 Have you wanted a way to reliably get the time your application was compiled at, but still wanted to have 'deterministic' builds enabled? Well then do I have the package for you!
