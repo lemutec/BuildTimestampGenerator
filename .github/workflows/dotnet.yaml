@@ -39,11 +39,11 @@ jobs:
       DOTNET_MULTILEVEL_LOOKUP: 0
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v6
 
     - name: Cache .NET Toolchains
       id: cache-dotnet-toolchain
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         path: '%LocalAppData%\Microsoft\dotnet\'
         key: 'dotnet-toolchain'
@@ -56,11 +56,11 @@ jobs:
         echo "$env:LocalAppData\Microsoft\dotnet;$env:UserProfile\.dotnet\tools;$env:PATH"
         $env:GITHUB_PATH="$env:LocalAppData\Microsoft\dotnet;$env:UserProfile\.dotnet\tools;$env:PATH"
 
-    - name: Setup .NET 9.0
+    - name: Setup .NET 10.0
       if: steps.cache-dotnet-toolchain.outputs.cache-hit != 'true'
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v5
       with:
-        dotnet-version: 9.0.x
+        dotnet-version: 10.0.x
 
     # packages don't like to restore if you don't clean first?
     # see: https://github.com/actions/setup-dotnet/issues/155
@@ -78,7 +78,7 @@ jobs:
     ####################################### STORE #######################################
 
     - name: Store Package Artifacts
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: NuGet Packages
         path: |
@@ -87,7 +87,7 @@ jobs:
         retention-days: 7
 
     - name: Store Binary Artifacts
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: Library Binaries
         path: |
@@ -112,7 +112,6 @@ jobs:
         TAG_COMMIT: true
         VERSION_FILE_PATH: BuildTimestampGenerator.csproj
         VERSION_REGEX: ^\s*<VersionPrefix>(.*)<\/VersionPrefix>\s*$
-        TAG_FORMAT: v*
         NUGET_KEY: ${{secrets.NUGET_API_KEY}}
         NUGET_SOURCE: https://api.nuget.org
         INCLUDE_SYMBOLS: true
