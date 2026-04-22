@@ -29,14 +29,13 @@ Here is a forked repo, since `the word` is not allowed in the source code.
 ```csharp
 using System;
 
-namespace HelloTimestamp
+namespace HelloTimestamp;
+
+internal class Program
 {
-    internal class Program
+    private static void Main(string[] args)
     {
-        private static void Main(string[] args)
-        {
-            Console.WriteLine($"I was built at {Lemutec.BuildTimestamp.BuildTime}");
-        }
+        Console.WriteLine($"I was built at {Lemutec.BuildTimestamp.BuildTime}");
     }
 }
 ```
