@@ -1,18 +1,17 @@
 using System;
-
 using Microsoft.CodeAnalysis;
 
-namespace Lemutec.BuildTimestampGenerator
-{
-	[Generator]
-	internal class BuildTimestamp : ISourceGenerator
-	{
-		public void Execute(GeneratorExecutionContext context)
-		{
-			DateTime executeTimeUtc = DateTime.UtcNow;
-			DateTimeOffset executeTimeUtcOffset = new(executeTimeUtc);
+namespace Lemutec.BuildTimestampGenerator;
 
-			string source = $@"// Auto-generated code
+[Generator]
+internal class BuildTimestamp : ISourceGenerator
+{
+	public void Execute(GeneratorExecutionContext context)
+	{
+		DateTime executeTimeUtc = DateTime.UtcNow;
+		DateTimeOffset executeTimeUtcOffset = new(executeTimeUtc);
+
+		string source = $@"// Auto-generated code
 using System;
 using System.Diagnostics.CodeAnalysis;
 
@@ -74,11 +73,10 @@ namespace {nameof(Lemutec)}
 }}
 ";
 
-			context.AddSource($"{nameof(BuildTimestamp)}.g.cs", source);
-		}
+		context.AddSource($"{nameof(BuildTimestamp)}.g.cs", source);
+	}
 
-		public void Initialize(GeneratorInitializationContext context)
-		{
-		}
+	public void Initialize(GeneratorInitializationContext context)
+	{
 	}
 }
