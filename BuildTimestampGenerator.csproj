@@ -14,7 +14,7 @@
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
     <NeutralLanguage>en</NeutralLanguage>
 
-    <VersionPrefix>1.1.0</VersionPrefix>
+    <VersionPrefix>1.1.1</VersionPrefix>
     <VersionSuffix>$(VersionSuffix)</VersionSuffix>
 
     <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
@@ -30,7 +30,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeSymbols>true</IncludeSymbols>
     <NoPackageAnalysis>true</NoPackageAnalysis>
-    <PackageIcon>timestamp-icon-color.png</PackageIcon>
+    <PackageIcon>logo.png</PackageIcon>
     <PackageLicenseExpression>0BSD</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/Lemutec/BuildTimestampGenerator</PackageProjectUrl>
